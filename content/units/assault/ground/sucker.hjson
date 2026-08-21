@@ -23,23 +23,24 @@ weapons: [
     name: "chain"
     reload: 400
     x: 0
-    y: 1.2
+    y: -0.5
     top: true
     mirror: false
+    rotate: true
     cooldownTime: 60
     chargeSound: spellloop
     shootSound: smiteShoot
     shoot: {
       type: ShootPattern
-      shots: 18
-      shotDelay: 3.5
+      shots: 24
+      shotDelay: 1.2
     }
     shootStatus: slow
-    shootStatusDuration: 245
+    shootStatusDuration: 215
     bullet: {
       type: MissileBulletType
       damage: 17
-      speed: 2.5
+      speed: 5
       lifetime: 35
       width: 7
       height: 9
@@ -59,9 +60,9 @@ weapons: [
   {
     name: "mount"
     reload: 66
-    x: 4.5
-    y: -1
-    top: true
+    x: 5
+    y: 1
+    top: false
     mirror: true
     autoTarget: true
     controllable: false
