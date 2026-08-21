@@ -1,0 +1,54 @@
+type: flying
+name: "Lace"
+description: "A fast, aggressive Black-Flag drone. Emerges from the blind fog to blast defenses away before disappearing."
+speed: 5
+accel: 0.04
+drag: 0.02
+flying: true
+health: 140
+circletarget: true
+hitSize: 8
+targetAir: false
+targetGround: true
+visionRadius: 2
+drawCell: false 
+drawEngine: true 
+engineSize: 2.2
+engineOffset: 5.5
+trailLength: 12        
+trailWidth: 2.5        
+trailScl: 1.5
+deathSound: me
+weapons: [
+  {
+    name: "blunderbuss"
+    reload: 45
+    x: 0 
+    y: 2
+    top: false
+    mirror: false
+    layerOffset: -0.01
+    inaccuracy: 25
+    shootSound: bang
+    shoot: {
+      type: ShootSpread
+      shots: 10
+      spread: 1.0
+    }
+    bullet: {
+      type: BasicBulletType
+      damage: 12
+      sprite: circle
+      speed: 4
+      lifetime: 15 
+      width: 7
+      height: 7
+      frontColor: "ffffcc"
+      backColor: "ff9c24"
+      knockback: 6.5
+      trailLength: 2
+      trailColor: "ff9c24"
+      trailWidth: 1
+    }
+  }
+]

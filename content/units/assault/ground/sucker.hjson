@@ -1,0 +1,82 @@
+type: legs
+name: "Garat"
+description: "OH GREAT HEAVENS!"
+speed: 0.65
+health: 320
+armor: 4
+hitSize: 11
+flying: false
+allowLegStep: true
+legCount: 4
+legGroupSize: 2
+legLength: 14.0
+legBaseOffset: 2.0
+legExtension: 2.5
+legPairOffset: 2.0
+legSpeed: 0.2
+legContinuousMove: true
+legDrawOffset: 0.0
+rippleScale: 0.8
+deathSound: ogh
+weapons: [
+  {
+    name: "chain"
+    reload: 400
+    x: 0
+    y: 1.2
+    top: true
+    mirror: false
+    cooldownTime: 60
+    chargeSound: spellloop
+    shootSound: smiteShoot
+    shoot: {
+      type: ShootPattern
+      shots: 18
+      shotDelay: 3.5
+    }
+    shootStatus: slow
+    shootStatusDuration: 245
+    bullet: {
+      type: MissileBulletType
+      damage: 17
+      speed: 2.5
+      lifetime: 35
+      width: 7
+      height: 9
+      frontColor: "ffffcc"
+      backColor: "ff9c24"
+      inaccuracy: 3.5
+      knockback: 2.2
+      homingPower: 0.1
+      homingRange: 80.0
+      weaveMag: 3.0
+      weaveScale: 4.0
+      trailLength: 6
+      trailColor: "ff9c24"
+      trailWidth: 1.5
+    }
+  }
+  {
+    name: "mount"
+    reload: 66
+    x: 4.5
+    y: -1
+    top: true
+    mirror: true
+    autoTarget: true
+    controllable: false
+    shootSound: pew
+    bullet: {
+      type: BasicBulletType
+      damage: 5
+      speed: 5.5
+      lifetime: 30
+      width: 5
+      height: 7
+      frontColor: "ffffcc"
+      backColor: "ff9c24"
+      trailEffect: artilleryTrail
+      trailInterval: 2.5
+    }
+  }
+]
