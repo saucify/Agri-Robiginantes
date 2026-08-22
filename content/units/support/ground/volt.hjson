@@ -1,0 +1,59 @@
+type: "legs"
+name: "Volt"
+description: "deez"
+details: "nutz"
+speed: 0.95
+health: 90
+armor: 0
+hitSize: 6
+flying: false
+allowLegStep: true
+itemCapacity: 15
+legCount: 6
+legGroupSize: 2
+legLength: 8
+legBaseOffset: 1
+legExtension: 1.5
+legPairOffset: 1
+legSpeed: 0.5
+legContinuousMove: true
+legDrawOffset: 0
+rippleScale: 0.3
+deathSound: "spark"
+deathExplosionEffect: "healWaveDynamic"
+heals: true
+healPercent: 12
+splashDamage: 2
+splashDamageRadius: 64
+
+weapons: [
+  {
+    name: "blaster"
+    x: 0
+    y: 1
+    mirror: false
+    reload: 53
+    shootSound: "spark"
+    shootEffect: "sparkShoot"
+    shoot: {
+      shots: 3
+      shotDelay: 3
+    }
+    bullet: {
+      type: "LaserBoltBulletType"
+      damage: 2
+      healPercent: 1
+      collidesTeam: true
+      speed: 5.5
+      lifetime: 25
+      width: 2
+      height: 6
+      frontColor: "ffffff"
+      backColor: "ffcc44"
+      hitEffect: "sparkShoot"
+      despawnEffect: "sparkShoot"
+      status: "shocked"
+      statusDuration: 45
+    }
+  }
+]

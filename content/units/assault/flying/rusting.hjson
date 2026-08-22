@@ -1,0 +1,38 @@
+type: "flying"
+name: "flare"
+description: "localized legacy version of the unit flare very insubstantial and easily gets destroyed due to its own weapon's recoil"
+speed: 2.3
+flying: true
+health: 70
+hitSize: 8
+engineColor: "ff803b"
+engineLayer: 110
+deathExplosionEffect: "dynamicExplosion"
+
+weapons: [
+  {
+    name: "blaster"
+    x: 0
+    y: 2
+    mirror: false
+    alternate: false
+    reload: 40
+    shootSound: "bang"
+    shake: 4
+    
+    bullet: {
+      type: "BasicBulletType"
+      damage: 35
+      sprite: circle
+      speed: 4.5
+      lifetime: 40
+      width: 7
+      height: 7
+      frontColor: "ffae68"
+      backColor: "ca561a"
+      killShooter: true
+      hitEffect: "shootSmokeMissile" 
+      despawnEffect: "colorSpark"
+    }
+  }
+]

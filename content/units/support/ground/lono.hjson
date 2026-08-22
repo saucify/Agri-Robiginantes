@@ -1,0 +1,49 @@
+type: "legs"
+name: "Lono"
+description: "A specialized unit designed for heavy cargo no combat capabilities whatsoever"
+details: "tips: while they cant attack they can support by using their point defenses whatsoever dont keep them in the front lines"
+speed: 0.85
+health: 190
+armor: 2
+hitSize: 9
+flying: false
+allowLegStep: true
+itemCapacity: 120
+isEnemy: false
+
+legCount: 4
+legGroupSize: 2
+legLength: 10
+legBaseOffset: 1.5
+legExtension: 2
+legPairOffset: 1.5
+legSpeed: 0.4
+legContinuousMove: true
+legDrawOffset: 0
+rippleScale: 0.5
+deathSound: "ogh"
+
+weapons: [
+  {
+    type: "PointDefenseWeapon"
+    name: "deflection"
+    x: 0
+    y: 1.5
+    mirror: false
+    reload: 3
+    targetInterval: 4
+    targetSwitchInterval: 5
+    
+    shootSound: "spark"
+    shootEffect: "shootSmall"
+    
+    bullet: {
+      type: "BulletType"
+      maxRange: 300
+      damage: 5
+      
+      hitEffect: "lightning"
+      despawnEffect: "none"
+    }
+  }
+]

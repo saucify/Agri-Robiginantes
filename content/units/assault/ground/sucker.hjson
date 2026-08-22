@@ -1,6 +1,7 @@
-type: legs
+type: "legs"
 name: "Garat"
-description: "OH GREAT HEAVENS!"
+description: "mayo"
+details: "jeez"
 speed: 0.65
 health: 320
 armor: 4
@@ -9,75 +10,98 @@ flying: false
 allowLegStep: true
 legCount: 4
 legGroupSize: 2
-legLength: 14.0
-legBaseOffset: 2.0
+legLength: 14
+legBaseOffset: 2
 legExtension: 2.5
-legPairOffset: 2.0
+legPairOffset: 2
 legSpeed: 0.2
 legContinuousMove: true
-legDrawOffset: 0.0
+legDrawOffset: 0
 rippleScale: 0.8
-deathSound: ogh
+deathSound: "ogh"
+
 weapons: [
   {
     name: "chain"
     reload: 400
     x: 0
-    y: -0.5
+    y: -1.2
     top: true
+    autoTarget: true
+    controllable: false
     mirror: false
     rotate: true
     cooldownTime: 60
-    chargeSound: spellloop
-    shootSound: smiteShoot
+    chargeSound: "beam"
+    shootSound: "missile"
+    
     shoot: {
-      type: ShootPattern
       shots: 24
       shotDelay: 1.2
     }
-    shootStatus: slow
-    shootStatusDuration: 215
+    
+    shootStatus: "slow"
+    shootStatusDuration: 185
+    
+    chargeEffect: "lightningCharge"
+    shootEffect: "shootSmall"
+    smokeEffect: "none"
+    
     bullet: {
-      type: MissileBulletType
-      damage: 17
-      speed: 5
-      lifetime: 35
-      width: 7
-      height: 9
+      type: "MissileBulletType"
+      damage: 25
+      speed: 7
+      lifetime: 60
+      width: 10
+      height: 15
       frontColor: "ffffcc"
       backColor: "ff9c24"
       inaccuracy: 3.5
-      knockback: 2.2
+      knockback: 4
       homingPower: 0.1
-      homingRange: 80.0
-      weaveMag: 3.0
-      weaveScale: 4.0
-      trailLength: 6
+      homingRange: 10
+      trailLength: 12
       trailColor: "ff9c24"
-      trailWidth: 1.5
+      trailWidth: 2.2
+      
+      # Clean, non-distracting impact effects
+      hitEffect: "hitBulletSmall"
+      despawnEffect: "hitBulletSmall"
     }
   }
   {
     name: "mount"
-    reload: 66
+    reload: 12
     x: 5
-    y: 1
+    y: 2.5
     top: false
     mirror: true
     autoTarget: true
-    controllable: false
-    shootSound: pew
+    controllable: true
+    layerOffset: -0.01
+    shootSound: "shootSnap"
+    rotate: true
+    rotateSpeed: 4
+    
+    shootEffect: "shootSmall"
+    smokeEffect: "none"
+    
     bullet: {
-      type: BasicBulletType
-      damage: 5
-      speed: 5.5
-      lifetime: 30
+      type: "BasicBulletType"
+      damage: 6
+      sprite: "circle"
+      speed: 6
+      lifetime: 25
       width: 5
-      height: 7
+      height: 5
       frontColor: "ffffcc"
       backColor: "ff9c24"
-      trailEffect: artilleryTrail
-      trailInterval: 2.5
+      trailLength: 6
+      trailColor: "ff9c24"
+      trailWidth: 1.2
+      
+      hitEffect: "none"
+      despawnEffect: "none"
     }
   }
 ]
