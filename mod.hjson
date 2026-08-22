@@ -1,6 +1,6 @@
 name: "rust"
-displayName: "Abyss / Rusting Fields"
+displayName: "Agri Robiginantes"
 author: "Saucify"
 description: "A rusting graveyard world."
 version: "1.0"
-minGameVersion: "146"
+minGameVersion: "159.4"
